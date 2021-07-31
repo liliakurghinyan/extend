@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -ms-grid-rows: 4fr 1fr;
+      grid-template-rows: 4fr 1fr;
+      grid-template-areas: "main posts" "footer posts";
+  height: 100vh;
+}
+
+section {
+  padding: 7.5em;
+}
+
+section > p {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card {
+  padding: 1em;
+  margin-right: .5em;
+  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+}
+/*# sourceMappingURL=extend.css.map */

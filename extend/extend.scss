@@ -1,0 +1,62 @@
+$layout-padding: 3em;
+$primary-color: #0090FF;
+$darken-primary: darken($primary-color, 20%);
+
+
+%text {
+    font-size: .9rem;
+    line-height: 2em;
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: 
+         "main posts"
+         "footer posts";
+    height: 100vh;
+}
+
+section {
+    padding: $layout-padding * 2.5;
+    background-color: $primary-color;
+
+    & > p {
+        font-size: 1.5em;
+        margin-top: 0;
+        margin-bottom: 1.5em;
+    }
+}
+
+.card-container {
+    display: flex;
+}
+
+.card {
+    @extend text;
+    padding: 1em;
+    margin-right: .5em;
+    box-shadow: 10px 10px 20px rgba(0,0,0, .05);
+}
+
+.sidebar {
+     grid-area: posts;
+     background-color: $darken-primary;
+     color: lighten($primary-color, 30%);
+
+    li {
+      @extend text;
+    }
+}
